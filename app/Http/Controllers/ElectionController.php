@@ -17,8 +17,8 @@ class ElectionController extends Controller
     	$party = Party::find(1);
     	//dd($party->Name);
     	return view('front',[
-    		'candidate'=>$candidate, 
-    		'data'=>$data, 
+    		'candidate'=>$candidate,
+    		'data'=>$data,
     		'party'=>$party
     		]);
     }
@@ -28,8 +28,8 @@ class ElectionController extends Controller
     	$party = Party::find(1);
     	//dd($party->Name);
     	return view('about',[
-    		'candidate'=>$candidate, 
-    		'data'=>$data, 
+    		'candidate'=>$candidate,
+    		'data'=>$data,
     		'party'=>$party
     		]);
     }
@@ -39,8 +39,8 @@ class ElectionController extends Controller
     	$party = Party::find(1);
     	//dd($party->Name);
     	return view('contact',[
-    		'candidate'=>$candidate, 
-    		'data'=>$data, 
+    		'candidate'=>$candidate,
+    		'data'=>$data,
     		'party'=>$party
     		]);
     }
@@ -50,8 +50,8 @@ class ElectionController extends Controller
     	$party = Party::find(1);
     	//dd($party->Name);
     	return view('faqs',[
-    		'candidate'=>$candidate, 
-    		'data'=>$data, 
+    		'candidate'=>$candidate,
+    		'data'=>$data,
     		'party'=>$party
     		]);
     }
@@ -61,19 +61,26 @@ class ElectionController extends Controller
     	$party = Party::find(1);
     	//dd($party->Name);
     	return view('downloads',[
-    		'candidate'=>$candidate, 
-    		'data'=>$data, 
+    		'candidate'=>$candidate,
+    		'data'=>$data,
     		'party'=>$party
     		]);
     }
      public function getResults(){
-    	$candidate = Candidate::all();
+      $candidatesConstituencyMaxPk = Candidate::where('ConstType','=','PK')->where('ConstNumber','=','1')->max('Votes');
+      $candidatesConstituencyMaxNa = Candidate::where('ConstType','=','NA')->where('ConstNumber','=','1')->max('Votes');
+
+      $candidatePk = Candidate::where('Votes',$candidatesConstituencyMaxPk)->get();
+      $candidateNa = Candidate::where('Votes',$candidatesConstituencyMaxNa)->get();
+
+      //dd($candidate);
     	$data = Data::all();
     	$party = Party::find(1);
     	//dd($party->Name);
     	return view('results',[
-    		'candidate'=>$candidate, 
-    		'data'=>$data, 
+    		'candidateNa'=>$candidateNa,
+        'candidatePk'=>$candidatePk,
+    		'data'=>$data,
     		'party'=>$party
     		]);
     }
@@ -83,8 +90,8 @@ class ElectionController extends Controller
         $party = Party::all();
         //dd($party->Name);
         return view('parties',[
-            'candidate'=>$candidate, 
-            'data'=>$data, 
+            'candidate'=>$candidate,
+            'data'=>$data,
             'party'=>$party
             ]);
     }
@@ -94,11 +101,11 @@ class ElectionController extends Controller
         $party = Party::find(1);
         //dd($party->Name);
         return view('data',[
-            'candidate'=>$candidate, 
-            'data'=>$data, 
+            'candidate'=>$candidate,
+            'data'=>$data,
             'party'=>$party
             ]);
-    
+
     }
 
 
