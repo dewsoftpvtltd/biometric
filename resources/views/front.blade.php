@@ -1,7 +1,7 @@
 @extends('templates.main')
 @section('content')
 	<div id="contents">
-		
+
 			<div class="container">
   <br>
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -22,7 +22,7 @@
       <div class="item">
         <img src="{{asset('images/oath.png') }}" alt="Chania" width="460" height="345">
       </div>
-    
+
       <div class="item">
         <img src="{{asset('images/nawaz.png') }}" alt="Flower" width="460" height="345">
       </div>
@@ -47,9 +47,9 @@
 		</div>
 		<div class="highlight">
 			<div class="clearfix">
-				
+
 				<h1>Our Vision and Mission</h1>
-				<h2> Vision </h2><p style="margin-top: -25px;"> 
+				<h2> Vision </h2><p style="margin-top: -25px;">
 
 						To fulfill its Constitutional obligation of holding free, fair and impartial
 						elections in an effective, credible, transparent and independent manner;
@@ -76,7 +76,7 @@
 						</div>
 					</div>
 					<p>
-						<b>QUAID-E-AZAM MUHAMMAD ALI JINNAH ADDRESS TO THE CIVIL SERVANTS IN PESHAWAR [APRIL, 1948]</b> 
+						<b>QUAID-E-AZAM MUHAMMAD ALI JINNAH ADDRESS TO THE CIVIL SERVANTS IN PESHAWAR [APRIL, 1948]</b>
 					</p>
 					<a href="#" class="more">Read More</a>
 				</li>
@@ -87,7 +87,7 @@
 						</div>
 					</div>
 					<p>
-						<b>Message from Honourable CHEIF Election COMMISSION</b> 
+						<b>Message from Honourable CHEIF Election COMMISSION</b>
 
 
 					</p><br>
@@ -101,7 +101,7 @@
 					</div>
 					<p>
 						<b>Foreword Secretary Election Commission of Pakistan (ECP)
-</b> 
+</b>
 					</p>
 					<br>
 					<a href="#" class="more">Read More</a>
@@ -113,7 +113,7 @@
 						</div>
 					</div>
 					<p>
-						<b>Press Release and notifications</b> 
+						<b>Press Release and notifications</b>
 					</p>
 					<br><br>
 					<a href="#" class="more">Read More</a>

@@ -4,7 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Electronic Biometric Voting System </title>
-	
+
 	<link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}"><link rel="stylesheet" href="{{ asset('css/main.css') }}" type="text/css">
 	<style>
   .carousel-inner > .item > img,
@@ -16,7 +16,7 @@
 </head>
 <body>
 	<div id="header">
-		
+
 			<div class="logo">
 				<a href="index.html" ><img src="{{asset('images/logo.png')}}" alt="LOGO" height="100" width="290" style="margin-bottom:-20px; margin-left: 50px;"
 				></a>
@@ -32,15 +32,15 @@
 				<li>
 					<a href="{{ url('faqs')}}">FAQs</a>
 				</li>
-				
+
 				<li>
 					<a href="{{ url('results')}}">Election Results</a>
-					
+
 				</li>
 				<li>
 					<a href="{{ url('parties')}}">Political Parties</a>
 				</li>
-				
+
 				<li>
 					<a href="{{ route('contact')}}">Contact</a>
 				</li>
@@ -59,7 +59,7 @@
 			<div class="section contact">
 				<h4>Contact Us</h4>
 				<p>
-					<span>Address:</span> Election Commission Of Pakistan Secretariat, Election House 
+					<span>Address:</span> Election Commission Of Pakistan Secretariat, Election House
 Constitution Avenue G-5/2
 Islamabad
 				</p>
@@ -75,7 +75,7 @@ Islamabad
 				<p>
 					If you have any issues regarding your registration in the voter list or your candidature in the national assembly or provincial assemblies or any other query you can send us an email.
 				</p>
-				<a href="info@ecp.gov.pk" class="subscribe">Click to send us an email</a>
+				<button onclick="alert('Email sent to : info@ecp.gov.pk')" class="btn btn-primary">Click to send us an email</button>
 			</div>
 		</div>
 		<div id="footnote">
@@ -92,4 +92,12 @@ Islamabad
 </body>
 <script src="{{ asset('js/jquery.min.js') }}"></script>
   <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('js/init.js') }}"></script>
+
+  <script>
+
+    function myFunc(){
+      alert('Message Sent');
+    }
+  </script>
 </html>

@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', 'ElectionController@getIndex');
+Route::get('/', ['as'=>'home','uses'=>'ElectionController@getIndex']);
 Route::get('/about', 'ElectionController@getAbout');
 Route::get('contact', ['as' => 'contact', 'uses'=>'ElectionController@getContact']);
 Route::get('/faqs', 'ElectionController@getFaq');

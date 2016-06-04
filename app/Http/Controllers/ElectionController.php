@@ -12,59 +12,24 @@ use App\Party;
 class ElectionController extends Controller
 {
     public function getIndex(){
-    	$candidate = Candidate::all();
-    	$data = Data::all();
-    	$party = Party::find(1);
-    	//dd($party->Name);
-    	return view('front',[
-    		'candidate'=>$candidate,
-    		'data'=>$data,
-    		'party'=>$party
-    		]);
+
+    	return view('front');
     }
     public function getAbout(){
-    	$candidate = Candidate::all();
-    	$data = Data::all();
-    	$party = Party::find(1);
-    	//dd($party->Name);
-    	return view('about',[
-    		'candidate'=>$candidate,
-    		'data'=>$data,
-    		'party'=>$party
-    		]);
+
+    	return view('about');
     }
     public function getContact(){
-    	$candidate = Candidate::all();
-    	$data = Data::all();
-    	$party = Party::find(1);
-    	//dd($party->Name);
-    	return view('contact',[
-    		'candidate'=>$candidate,
-    		'data'=>$data,
-    		'party'=>$party
-    		]);
+
+    	return view('contact');
     }
     public function getFaq(){
-    	$candidate = Candidate::all();
-    	$data = Data::all();
-    	$party = Party::find(1);
-    	//dd($party->Name);
-    	return view('faqs',[
-    		'candidate'=>$candidate,
-    		'data'=>$data,
-    		'party'=>$party
-    		]);
+
+    	return view('faqs');
     }
     public function getDownloads(){
-    	$candidate = Candidate::all();
-    	$data = Data::all();
-    	$party = Party::find(1);
-    	//dd($party->Name);
-    	return view('downloads',[
-    		'candidate'=>$candidate,
-    		'data'=>$data,
-    		'party'=>$party
-    		]);
+
+    	return view('downloads');
     }
      public function getResults(){
       $candidatesConstituencyMaxPk = Candidate::where('ConstType','=','PK')->where('ConstNumber','=','1')->max('Votes');
@@ -73,37 +38,26 @@ class ElectionController extends Controller
       $candidatePk = Candidate::where('Votes',$candidatesConstituencyMaxPk)->get();
       $candidateNa = Candidate::where('Votes',$candidatesConstituencyMaxNa)->get();
 
-      //dd($candidate);
-    	$data = Data::all();
-    	$party = Party::find(1);
-    	//dd($party->Name);
     	return view('results',[
     		'candidateNa'=>$candidateNa,
         'candidatePk'=>$candidatePk,
-    		'data'=>$data,
-    		'party'=>$party
+
     		]);
     }
          public function getParties(){
-        $candidate = Candidate::find(1);
-        $data = Data::all();
         $party = Party::all();
-        //dd($party->Name);
         return view('parties',[
-            'candidate'=>$candidate,
-            'data'=>$data,
             'party'=>$party
             ]);
     }
      public function getData(){
-        $candidate = Candidate::find(1);
+
         $data = Data::find(1);
-        $party = Party::find(1);
-        //dd($party->Name);
+
         return view('data',[
-            'candidate'=>$candidate,
-            'data'=>$data,
-            'party'=>$party
+
+            'data'=>$data
+
             ]);
 
     }

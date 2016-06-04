@@ -8,7 +8,7 @@
 					<ul class="contact">
 						<li>
 							<p>
-								<span class="home"></span> <em>Election Comission of Pakistan<br> <small>SECRETARIAT </small></em>Election Commission Of Pakistan Secretariat, Election House 
+								<span class="home"></span> <em>Election Comission of Pakistan<br> <small>SECRETARIAT </small></em>Election Commission Of Pakistan Secretariat, Election House
 Constitution Avenue G-5/2
 Islamabad
 							</p>
@@ -32,7 +32,7 @@ Islamabad
 				<p>
 					If you have any issues regarding your registration in the voter list or your candidature in the national assembly or provincial assemblies or any other query you can send us a message.
 				</p>
-				<form action="index.html" method="post" class="message">
+				<form action="{{route('home')}}" method="get" class="message">
 					<label>First Name</label>
 					<input type="text" value="">
 					<label>Last Name</label>
@@ -41,7 +41,7 @@ Islamabad
 					<input type="text" value="">
 					<label>Message</label>
 					<textarea></textarea>
-					<input type="submit" value="Send Message">
+					<button id="sendmessage" onclick="myFunc()" class="btn btn-primary"> Send Message</button>
 				</form>
 			</div>
 		</div>
